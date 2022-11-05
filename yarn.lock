@@ -10981,6 +10981,11 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
+vision-camera-dynamsoft-barcode-reader@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/vision-camera-dynamsoft-barcode-reader/-/vision-camera-dynamsoft-barcode-reader-0.4.4.tgz#831116952e145ddbd5cdcc9f1f723e8dcc56b077"
+  integrity sha512-NbHvJD46efls0h8RNFBI8lNExVMgX4tmqsaTyGgmlsJ8NMDyzPjx5XNdUWAD8Pi4pldNdY10WcvLp+bAz5HDMg==
+
 vlq@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/vlq/-/vlq-1.0.1.tgz#c003f6e7c0b4c1edd623fd6ee50bbc0d6a1de468"

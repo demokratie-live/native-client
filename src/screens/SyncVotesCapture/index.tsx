@@ -14,6 +14,8 @@ import {
   useCameraDevices,
   useFrameProcessor,
 } from 'react-native-vision-camera';
+import { DBRConfig, decode as __decode, TextResult } from 'vision-camera-dynamsoft-barcode-reader';
+import * as REA from 'react-native-reanimated';
 
 const Container = styled.View`
   flex: 1;
@@ -68,33 +70,40 @@ export const SyncVotesCaptureScreen: React.FC<Props> = ({ navigation }) => {
   const [syncComplete, setSyncComplete] = useState<boolean>(false);
   const [identifier, setIdentifier] = useState<string>();
   const setVotesLocal = useSetRecoilState(votesLocalState);
+  const [barcodeResults, setBarcodeResults] = React.useState([] as TextResult[]);
 
   const devices = useCameraDevices();
   const device = devices.back;
+
   const frameProcessor = useFrameProcessor(frame => {
     'worklet';
-    console.log(frame);
-    // const isHotdog = detectIsHotdog(frame)
-    // console.log(isHotdog ? "Hotdog!" : "Not Hotdog.")
+    const config: DBRConfig = {};
+    config.template =
+      '{"ImageParameter":{"BarcodeFormatIds":["BF_QR_CODE"],"Description":"","Name":"Settings"},"Version":"3.0"}'; //scan qrcode only
+    // console.log(frame);
+    const results: TextResult[] = __decode(frame, config);
+    REA.runOnJS(setBarcodeResults)(results);
   }, []);
 
-  // const handleBarcode = (event: BarCodeReadEvent) => {
-  //   try {
-  //     const qrData: SyncObj = JSON.parse(event.data);
-  //     if (data.length === 0 && qrData.meta.identifier) {
-  //       setIdentifier(qrData.meta.identifier);
-  //     } else if (identifier !== qrData.meta.identifier || !qrData.meta.identifier) {
-  //       throw new Error('identifier do not matching');
-  //     }
-  //     const current = qrData?.meta?.current;
-  //     const captured = data.some(({ meta }) => meta.current === current);
-  //     if (!captured) {
-  //       setData([...data, qrData]);
-  //     }
-  //   } catch (_e) {
-  //     // Do nothing
-  //   }
-  // };
+  useEffect(() => {
+    barcodeResults.forEach(({ barcodeText }) => {
+      try {
+        const qrData: SyncObj = JSON.parse(barcodeText);
+        if (data.length === 0 && qrData.meta.identifier) {
+          setIdentifier(qrData.meta.identifier);
+        } else if (identifier !== qrData.meta.identifier || !qrData.meta.identifier) {
+          throw new Error('identifier do not matching');
+        }
+        const current = qrData?.meta?.current;
+        const captured = data.some(({ meta }) => meta.current === current);
+        if (!captured) {
+          setData(data => [...data, qrData]);
+        }
+      } catch (_e) {
+        // Do nothing
+      }
+    });
+  }, [barcodeResults, data, identifier]);
 
   useEffect(() => {
     if (data.length > 0 && data.length === data[0].meta.sum) {

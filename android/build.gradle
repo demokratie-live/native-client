@@ -54,5 +54,8 @@ allprojects {
         }
         google()
         maven { url 'https://www.jitpack.io' }
+        maven {
+            url "https://download2.dynamsoft.com/maven/aar"
+        }
     }
 }

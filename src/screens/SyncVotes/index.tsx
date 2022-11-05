@@ -18,7 +18,6 @@ const Container = styled.ScrollView.attrs({
 
 const QrContainer = styled.View`
   margin-top: 11px;
-  margin-bottom: 11px;
 `;
 
 const Text = styled.Text`
@@ -137,9 +136,15 @@ export const SyncVotesScreen = () => {
     <Container>
       <Text>So überträgst Du Deine lokalen Stimmen auf dein neues Gerät:</Text>
       {!!localVotes && !!localVotes[iterator] && (
-        <QrContainer>
-          <QRCode size={qrSize} value={JSON.stringify(localVotes[iterator])} />
-        </QrContainer>
+        <>
+          <QrContainer>
+            <QRCode size={qrSize} value={JSON.stringify(localVotes[iterator])} />
+
+            <Text style={{ fontSize: 8, marginTop: 0 }}>
+              {localVotes[iterator].meta.current} / {localVotes[iterator].meta.sum}
+            </Text>
+          </QrContainer>
+        </>
       )}
       <ListElement label="1." text="Öffne DEMOCRACY auf deinem neuen Gerät" />
       <ListElement label="2." text="Tippe auf Menu > Settings und wähle Stimmen übertragen" />
