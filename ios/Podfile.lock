@@ -499,7 +499,7 @@ PODS:
     - React-perflogger (= 0.70.6)
   - RNBootSplash (4.7.5):
     - React-Core
-  - RNCAsyncStorage (1.17.11):
+  - RNCAsyncStorage (1.19.1):
     - React-Core
   - RNCPushNotificationIOS (1.11.0):
     - React-Core
@@ -553,7 +553,7 @@ PODS:
     - React-RCTText
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.24.0):
+  - RNScreens (3.13.1):
     - React-Core
     - React-RCTImage
   - RNSha256 (1.4.9):
@@ -862,7 +862,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 15437b576139df27635400de0599d9844f1ab817
   ReactCommon: 349be31adeecffc7986a0de875d7fb0dcf4e251c
   RNBootSplash: 85f6b879c080e958afdb4c62ee04497b05fd7552
-  RNCAsyncStorage: 8616bd5a58af409453ea4e1b246521bb76578d60
+  RNCAsyncStorage: f47fe18526970a69c34b548883e1aeceb115e3e1
   RNCPushNotificationIOS: 64218f3c776c03d7408284a819b2abfda1834bc8
   RNDeviceInfo: aad3c663b25752a52bf8fce93f2354001dd185aa
   RNFBApp: 1ee535dcb7773ca612d3a2e53a1f78f8f2fb6abf
@@ -873,7 +873,7 @@ SPEC CHECKSUMS:
   RNPermissions: f1b49dd05fa9b83993cd05a9ee115247944d8f1a
   RNRate: ef3bcff84f39bb1d1e41c5593d3eea4aab2bd73a
   RNReanimated: bec7736122a268883bdede07f1bf9cf4b40158db
-  RNScreens: b21dc57dfa2b710c30ec600786a3fc223b1b92e7
+  RNScreens: 40a2cb40a02a609938137a1e0acfbf8fc9eebf19
   RNSha256: a6bc3640a34eb41907e363828b9ec742c274298d
   RNSVG: d7d7bc8229af3842c9cfc3a723c815a52cdd1105
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
