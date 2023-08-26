@@ -525,7 +525,9 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = A4B84UJD7M;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DemocracyNative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_CFBundleDisplayName = DEMOCRACY;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,7 +567,9 @@
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = A4B84UJD7M;
 				INFOPLIST_FILE = DemocracyNative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_CFBundleDisplayName = DEMOCRACY;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -796,7 +800,9 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = A4B84UJD7M;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DemocracyNative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_CFBundleDisplayName = DEMOCRACY;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -922,7 +928,9 @@
 				DEVELOPMENT_TEAM = A4B84UJD7M;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = A4B84UJD7M;
 				INFOPLIST_FILE = DemocracyNative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_CFBundleDisplayName = DEMOCRACY;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

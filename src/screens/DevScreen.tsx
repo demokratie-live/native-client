@@ -6,6 +6,7 @@ import VotesLocal from '../lib/VotesLocal';
 import { NotifeeButton } from '../routes/Sidebar/DevScreen/NotifeeButton';
 import messaging from '@react-native-firebase/messaging';
 import styled from 'styled-components/native';
+import { PaymentScreen } from '../components/Payment';
 
 const Text = styled.Text`
   color: ${({ theme }) => theme.colors.text.primary};
@@ -106,6 +107,7 @@ export const DevScreen: React.FC = () => {
       <Text>APN Token:</Text>
       <Text selectable>{apnToken}</Text>
       <NotifeeButton />
+      <PaymentScreen />
     </>
   );
 };
